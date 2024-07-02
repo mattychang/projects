@@ -4,7 +4,7 @@ This repository contains four Python modules that perform various mathematical o
 
 ## Files
 
-### `complex_number.py`
+### `ComplexNumbers.py`
 
 This module defines a `ComplexNumber` class that allows you to perform various operations on complex numbers.
 
@@ -13,7 +13,7 @@ This module defines a `ComplexNumber` class that allows you to perform various o
 - Calculation of magnitude and conjugate of a complex number.
 - Conversion between rectangular and polar coordinates.
 
-### `matrix_operations.py`
+### `MatrixOperations.py`
 
 This module defines a `MatrixOperations` class that allows you to perform various operations on matrices.
 
@@ -22,7 +22,7 @@ This module defines a `MatrixOperations` class that allows you to perform variou
 - Calculation of determinant, adjugate, transpose, and inverse of a matrix.
 - Row operations and reduction to row-reduced echelon form (RREF).
 
-### `numbers.py`
+### `Numbers.py`
 
 This module defines a `Numbers` class that provides various number theory functions.
 
@@ -31,7 +31,7 @@ This module defines a `Numbers` class that provides various number theory functi
 - Prime number checking and generation.
 - Factorization of a number.
 
-### `statistics_and_probability.py`
+### `StatisticsAndProbability.py`
 
 This module defines a `StatisticsAndProbability` class that provides various statistical and probability functions.
 
