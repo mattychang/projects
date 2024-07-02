@@ -1,4 +1,19 @@
-# password_manager.py
+"""
+Password Manager
+
+This is a simple password manager application implemented in Python. 
+It allows users to securely store, retrieve, and delete passwords for various services. 
+The passwords are encrypted using the `cryptography` library to ensure security.
+
+Features:
+- Encrypt and store passwords securely.
+- Retrieve decrypted passwords when needed.
+- Delete stored passwords.
+- Uses a JSON file (`passwords.json`) to store encrypted passwords.
+- Uses a key file (`key.key`) to store the encryption key.
+
+
+"""
 
 from cryptography.fernet import Fernet
 import json
@@ -81,4 +96,23 @@ if __name__ == "__main__":
     pm.delete_password('example.com')
     print("Password for example.com after deletion:")
     print(pm.get_password('example.com'))
+    # Output: (None, None)
+
+    # Additional Test Cases
+
+    # Test adding another password
+    pm.add_password('newservice.com', 'user3', 'newpassword')
+    print("Password for newservice.com:")
+    print(pm.get_password('newservice.com'))
+    # Output: ('user3', 'newpassword')
+
+    # Test deleting a non-existent password
+    result = pm.delete_password('nonexistent.com')
+    print("Deleting nonexistent.com:")
+    print(result)
+    # Output: False
+
+    # Test retrieving a non-existent password
+    print("Password for nonexistent.com:")
+    print(pm.get_password('nonexistent.com'))
     # Output: (None, None)
