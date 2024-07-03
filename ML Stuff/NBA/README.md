@@ -1,7 +1,7 @@
 # NBA Player Performance Analysis
+## Author: Matthew Chang
 
 This project aims to analyze the performance of NBA players using historical season statistics. The analysis includes data preprocessing, exploratory data analysis, feature engineering, and predictive modeling using machine learning techniques.
-
 
 ## Files Description
 
@@ -13,19 +13,13 @@ This project aims to analyze the performance of NBA players using historical sea
 
 ## Installation
 
-1. Clone this repository to your local machine.
-2. Ensure you have Python 3.x installed.
+1. Ensure you have Python 3.x installed.
+2. Download the project files to your local machine.
 3. Install the required Python packages using the following command:
    ```bash
-   pip install -r requirements.txt
-   ```
+   pip install pandas seaborn matplotlib scikit-learn
 
 ## Usage
-To run the analysis script, navigate to the project directory and execute the following command:
-```bash
-python nba_player_analysis.py
-```
-
 The script will perform the following steps:
 
 1. Load the dataset.
@@ -44,13 +38,6 @@ The script will display:
 4. Mean Squared Error and R^2 Score for Linear Regression and Random Forest models.
 5. Scatter plot of Actual vs Predicted Efficiency.
 6. Scatter plot of player clusters based on PPG and Efficiency.
-
-### Dependencies
-
-1. pandas
-2. seaborn
-3. matplotlib
-4. scikit-learn
 
 ### Notes
 
