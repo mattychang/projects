@@ -14,9 +14,9 @@ This is a simple password manager application implemented in Python. It allows u
 ## Setup
 
 1. **Install the required dependencies:**
-    ```sh
-    pip install cryptography
-    ```
+```sh
+pip install cryptography
+```
 
 ## Usage
 
