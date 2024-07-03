@@ -10,6 +10,7 @@ This project aims to analyze the performance of NBA players using historical sea
   - `Players.csv`: Additional player information.
   - `Seasons_Stats.csv`: Season statistics for NBA players.
 - **nba_player_analysis.py**: Python script that performs the analysis and modeling of NBA player performance.
+- **nba_player_statistics.py**: Python script that performs basic statistics and data analysis on player information.
 
 ## Installation
 
@@ -25,7 +26,11 @@ The datasets used in this project were taken from Kaggle:
 - [NBA Players Stats](https://www.kaggle.com/datasets/drgilermo/nba-players-stats)
 
 ## Usage
-The script will perform the following steps:
+To run the analysis script, navigate to the project directory and execute the following command:
+```bash
+python nba_player_analysis.py
+```
+The script will do the following steps:
 
 1. Load the dataset.
 2. Handle missing values using imputation.
@@ -34,8 +39,20 @@ The script will perform the following steps:
 5. Fit and evaluate machine learning models (Linear Regression and Random Forest Regressor).
 6. Perform clustering analysis using KMeans.
 
+To run the statistics script, navigate to the project directory and execute the following command:
+
+```bash
+python nba_player_statistics.py
+```
+
+The script will perform the following steps:
+
+1. Load the dataset.
+2. Display summary statistics about the dataset.
+3. Visualize the distribution of players by height, weight, and where they went to university.
+
 ### Output
-The script will display:
+The `nba_player_analysis.py` script will display:
 
 1. Initial and processed data samples.
 2. Distribution plot of Points Per Game (PPG).
@@ -43,6 +60,13 @@ The script will display:
 4. Mean Squared Error and R^2 Score for Linear Regression and Random Forest models.
 5. Scatter plot of Actual vs Predicted Efficiency.
 6. Scatter plot of player clusters based on PPG and Efficiency.
+
+The `nba_player_statistics.py` script will display:
+
+1. Summary statistics about the dataset.
+2. Distribution of players by height.
+3. Distribution of players by weight.
+4. The top 20 universities producing NBA players.
 
 ### Notes
 
