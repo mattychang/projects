@@ -1,4 +1,4 @@
-# Automated Backup Shell Script
+# Backup Shell Script
 ## Author: Matthew Chang
 
 This shell script backs up all files in a specified directory by creating a compressed archive of the directory. The backup file will be named with the current date and time for easy identification.
