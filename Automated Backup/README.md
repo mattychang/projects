@@ -1,39 +1,54 @@
-# Automated Backup Script
+# Automated Backup Shell Script
+## Author: Matthew Chang
 
-This project provides an automated backup solution using a Python script. The script backs up a specified directory, compresses it, and saves it to a backup location. It also logs the backup operations to keep track of successful backups and any errors.
+This shell script backs up all files in a specified directory by creating a compressed archive of the directory. The backup file will be named with the current date and time for easy identification.
+
+## Usage
+
+To use this script, follow these steps:
+
+1. Save the script to a file, e.g., `backup.sh`.
+2. Make the script executable by running:
+    ```sh
+    chmod +x backup.sh
+    ```
+3. Run the script with the directory you want to back up as an argument:
+    ```sh
+    ./backup.sh /path/to/your/directory
+    ```
 
 ## Features
 
-- Backup a specified directory.
-- Compress the backup into a zip file.
-- Save the compressed backup to a specified location.
-- Log backup operations and errors.
+- Backs up all files in the specified directory.
+- Creates a backup directory (`~/backups`) in the user's home directory if it doesn't already exist.
+- Names the backup file with the current date and time for easy identification.
 
-## Disclaimers
-- This does not backup the directory of interest on a timely manner. It only backups the directory when executed.
+## Script Explanation
 
-## Requirements
+### Argument Check
 
-- Python 3.x
-- Libraries: `shutil`, `os`, `zipfile`, `datetime`, `logging`
+The script checks if a directory argument is provided. If not, it prints a usage message and exits.
 
-## Configuration
+### Directory Check
 
-You need to configure the following parameters in the script:
+The script verifies if the provided argument is a valid directory. If not, it prints an error message and exits.
 
-```python
-# Configuration
-source_dir = '/path/to/your/source/directory'
-backup_dir = '/path/to/your/backup/directory'
-```
+### Backup Directory
 
-## Running the script
+The script creates a backup directory (`$HOME/backups`) if it doesn't already exist.
 
-You can run the script manually from the command line:
-```bash
-python /path/to/backup_script.py
-```
+### Timestamp
 
-## Logs
-The script logs backup operations to a log file located in the backup directory (`backup_log.txt`). This log file includes timestamps, log levels, and messages indicating the success or failure of backup operations.
+A timestamp (`YYYYMMDDHHMMSS`) is created to uniquely identify the backup file.
 
+### Backup Filename
+
+The backup filename is constructed using the backup directory and the timestamp.
+
+### Create Backup
+
+The script uses `tar` to create a compressed archive (`tar.gz`) of the source directory. The `-C` option allows `tar` to change to the source directory before creating the archive, which ensures that the directory structure is preserved.
+
+### Success Check
+
+The script checks if the `tar` command was successful and prints a success or failure message accordingly.
