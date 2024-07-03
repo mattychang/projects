@@ -19,6 +19,11 @@ This project aims to analyze the performance of NBA players using historical sea
    ```bash
    pip install pandas seaborn matplotlib scikit-learn
 
+## Datasets
+
+The datasets used in this project were taken from Kaggle:
+- [NBA Players Stats](https://www.kaggle.com/datasets/drgilermo/nba-players-stats)
+
 ## Usage
 The script will perform the following steps:
 
