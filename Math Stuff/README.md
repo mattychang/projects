@@ -1,4 +1,5 @@
 # Some Useful Math Operations Library
+## Author: Matthew Chang
 
 This repository contains four Python modules that perform various mathematical operations: complex number operations, matrix operations, number theory functions, and statistical and probability calculations. Below is a brief overview of each module and its functionalities.
 
