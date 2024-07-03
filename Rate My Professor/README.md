@@ -1,4 +1,5 @@
 # RateMyProfessors Scraper
+## Author: Matthew Chang
 
 This Python script allows you to search for a professor's rating information on RateMyProfessors.com using Google search.
 
